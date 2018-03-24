@@ -38,10 +38,12 @@ public class Dashboard extends javax.swing.JFrame {
 
         sidePanel.setBackground(new java.awt.Color(0, 204, 204));
         sidePanel.setToolTipText("");
+        sidePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel5.setFont(new java.awt.Font("Segoe UI Light", 1, 36)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("TABLEAU DE BORD ");
+        sidePanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 80, 410, 60));
 
         btnClasse.setBackground(new java.awt.Color(255, 255, 255));
         btnClasse.setFont(new java.awt.Font("Segoe UI Light", 1, 18)); // NOI18N
@@ -52,6 +54,7 @@ public class Dashboard extends javax.swing.JFrame {
                 btnClasseActionPerformed(evt);
             }
         });
+        sidePanel.add(btnClasse, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 210, 290, 140));
 
         btnEleve.setBackground(new java.awt.Color(255, 255, 255));
         btnEleve.setFont(new java.awt.Font("Segoe UI Light", 1, 18)); // NOI18N
@@ -62,35 +65,9 @@ public class Dashboard extends javax.swing.JFrame {
                 btnEleveActionPerformed(evt);
             }
         });
+        sidePanel.add(btnEleve, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 290, 140));
 
-        javax.swing.GroupLayout sidePanelLayout = new javax.swing.GroupLayout(sidePanel);
-        sidePanel.setLayout(sidePanelLayout);
-        sidePanelLayout.setHorizontalGroup(
-            sidePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(sidePanelLayout.createSequentialGroup()
-                .addGroup(sidePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(sidePanelLayout.createSequentialGroup()
-                        .addGap(230, 230, 230)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(sidePanelLayout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addComponent(btnEleve, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(170, 170, 170)
-                        .addComponent(btnClasse, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(64, Short.MAX_VALUE))
-        );
-        sidePanelLayout.setVerticalGroup(
-            sidePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(sidePanelLayout.createSequentialGroup()
-                .addGap(80, 80, 80)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(70, 70, 70)
-                .addGroup(sidePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnEleve, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnClasse, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        );
-
-        getContentPane().add(sidePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 677));
+        getContentPane().add(sidePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, 860, 680));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
